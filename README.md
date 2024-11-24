@@ -1,3 +1,18 @@
+<!-- Descrição do Projeto: Recipe Vault
+
+O Recipe Vault é uma plataforma interativa e intuitiva para entusiastas da culinária compartilharem suas criações gastronômicas. A página permite que usuários insiram receitas completas, detalhando ingredientes, etapas de preparo, fotos e até mesmo vídeos demonstrativos. Além disso, os usuários podem adicionar dicas especiais que personalizem a experiência de cada prato, como sugestões de substituições, acompanhamentos ou segredos de preparo.
+
+Com um design moderno e organizado, o Recipe Vault busca ser um espaço de troca de conhecimento culinário, promovendo a criatividade e a conexão entre pessoas que amam cozinhar. Seja para registrar sua receita de família, inovar na cozinha ou se inspirar em novas ideias, o Recipe Vault será sua fonte confiável e prática.
+
+Principais Funcionalidades:
+Inserção de Receitas: Permita que os usuários adicionem título, descrição, tempo de preparo e porções.
+Galeria Visual: Upload de fotos dos pratos prontos para destacar os resultados finais.
+Vídeos de Preparo: Integre vídeos diretamente na receita para uma orientação mais clara e envolvente.
+Dicas e Personalizações: Um campo dedicado para usuários adicionarem suas sugestões e segredos.
+Pesquisa e Categorias: Filtragem por ingredientes, tipos de pratos, dificuldade e mais.
+Objetivo:
+Criar uma comunidade apaixonada por culinária, onde qualquer pessoa possa compartilhar, aprender e reinventar receitas de forma prática e divertida. -->
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
