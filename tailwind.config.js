@@ -11,6 +11,9 @@ export default {
     extend: {
       colors: {
         mustard: '#F79F1A',
+      },
+      backgroundImage: {
+        'food': "url('/png/food.png')",
       }
     },
   },
