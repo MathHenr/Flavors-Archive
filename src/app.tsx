@@ -1,8 +1,10 @@
+import { Navigation } from "./components/navigation";
+
 export function App() {
 
   return (
     <>
-      Hello World!
+      <Navigation />
     </>
   )
 }
