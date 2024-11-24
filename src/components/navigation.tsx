@@ -30,7 +30,7 @@ export function Navigation() {
 
                 <img 
                     className="w-40"
-                    src="/logo.svg"
+                    src="/svg/logo.svg"
                     alt="Logo"
                 />
             </span>
