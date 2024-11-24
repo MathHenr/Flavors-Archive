@@ -7,8 +7,8 @@ export function App() {
     <>
       <Navigation />
 
-      {/* Primeiro banner do site */}
-      <section
+      {/* Header */}
+      <header
         className="max-w-screen-2xl mx-auto mt-12 px-4 grid grid-cols-1 lg:grid-cols-2 font-poppins overflow-hidden"
       >
         {/* texto com botao */}
@@ -43,8 +43,9 @@ export function App() {
             alt="Food"
           />
         </div>
-      </section>
+      </header>
       
+
     </>
   )
 }
