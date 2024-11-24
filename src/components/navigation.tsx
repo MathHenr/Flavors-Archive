@@ -1,4 +1,7 @@
+import { useState } from "react";
+
 import { Search, Menu } from "lucide-react";
+import { twMerge as cn } from "tailwind-merge";
 
 const routes = [
     "Home",
@@ -7,11 +10,16 @@ const routes = [
     "About",
 ]
 
-export function Navigation() {
+export function Navigation() {  
+    const [show, setShow] = useState(false);
+
+    function showInput(): void {
+        return show ? setShow(false) : setShow(true);
+    }
     
     return (
         <nav
-            className="max-w-screen-2xl mx-auto flex items-center justify-between px-8 py-4 font-poppins"
+            className="max-w-screen-2xl mx-auto w-full flex items-center justify-between px-8 py-4 font-poppins"
         >
             <span
                 className="flex items-center gap-4"
@@ -42,7 +50,20 @@ export function Navigation() {
                 ))}
             </ul>
 
-            <Search/>
+            <div className="relative size-6 flex items-center gap-0.5">          
+                <input 
+                    className={cn("absolute -right-2 bg-slate-200 w-0 py-2 rounded-sm text-sm outline-none focus-visible:ring-0 focus-visible:ring-offset-0 transition-all duration-300 ease-in",
+                        show ? "md:w-60 md:px-2 rounded-full" : "",
+                    )}
+                    type="text"
+                    name="search" 
+                    id="search"
+                />
+                <Search
+                    className="size-6 z-10 cursor-pointer"
+                    onClick={showInput}
+                />
+            </div>
         </nav>
     )
 }
