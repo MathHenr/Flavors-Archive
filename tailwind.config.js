@@ -8,7 +8,11 @@ export default {
     fontFamily: {
       'poppins': ['Poppins'],
     },
-    extend: {},
+    extend: {
+      colors: {
+        mustard: '#F79F1A',
+      }
+    },
   },
   plugins: [],
 }
