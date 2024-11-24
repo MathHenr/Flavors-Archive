@@ -45,7 +45,28 @@ export function App() {
         </div>
       </header>
       
-
+      {/* section discover */}
+      <section
+        className="mt-24 py-2"
+      >
+        <div
+          className="max-w-screen-2xl mx-auto px-4 flex items-center justify-between"
+        >
+          <span>
+            <h1
+              className="text-3xl font-semibold"
+            >
+              Discover, Create and Share
+            </h1>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+            </p>
+          </span>
+          <Button>
+            Create
+          </Button>
+        </div>
+      </section>
     </>
   )
 }
