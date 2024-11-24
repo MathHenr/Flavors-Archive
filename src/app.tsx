@@ -35,10 +35,12 @@ export function App() {
 
         {/* imagem */}
         <div
-          className="lg:relative flex items-center justify-center col-span-1 h-full"
+          className="w-full items-center justify-center"
         >
-          <div
-            className="lg:absolute bg-food bg-contain bg-no-repeat lg:size-[800px] lg:-translate-x-[100px] max-lg:flex max-lg:items-center max-lg:size-[500px] -rotate-12 -z-10 lg:-rotate-45"
+          <img 
+            className="lg:absolute flex w-[700px] lg:-ml-[128px] -z-10 -rotate-12 select-none"
+            src="/png/food.png" 
+            alt="Food"
           />
         </div>
       </section>
