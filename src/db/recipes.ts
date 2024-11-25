@@ -8,7 +8,7 @@ const recipes = [
     {
       "name": "Beef Wellington",
       "timer": "2 hours",
-      "serves": 6,
+      "serves": 1,
       "difficulty": "Hard"
     },
     {
@@ -29,4 +29,6 @@ const recipes = [
       "serves": 4,
       "difficulty": "Hard"
     }
-  ]
+]
+
+export { recipes };

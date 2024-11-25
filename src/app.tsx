@@ -1,6 +1,7 @@
 import { Navigation } from "./components/navigation";
 import { Button } from "./components/button";
 import { RecipeIcon } from "./components/recipe-icon";
+import { recipes } from "./db/recipes";
 
 export function App() {
   return (
@@ -73,7 +74,15 @@ export function App() {
             className="grid grid-cols-1 lg:grid-cols-3 py-2 gap-3 place-items-center px-4 pb-[300px]"
           >
             {/* receita */}
-            <RecipeIcon />
+            { recipes.map((recipe) => (
+              <RecipeIcon 
+                key={recipe.name}
+                name={recipe.name}
+                difficulty={recipe.difficulty}
+                timer={recipe.timer}
+                serves={recipe.serves}
+              />
+            ))}
             
           </div>
         </div>

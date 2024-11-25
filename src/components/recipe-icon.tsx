@@ -1,8 +1,9 @@
+import { twMerge as cn } from "tailwind-merge";
 import { Clock4, UserRound, ChartNoAxesColumn } from "lucide-react";
 
 interface RecipeProps {
     name: string;
-    timer: number;
+    timer: string;
     serves: number;
     difficulty: string;
 }
@@ -12,7 +13,32 @@ export function RecipeIcon ({
     timer,
     serves,
     difficulty
-}: RecipeProps) {
+}: RecipeProps) {   
+    function formateTimer (timer: string): string {
+        if (timer.split(' ')[1] === "minutes"){
+            return `${timer.split(' ')[0]} min`;
+        }
+        return timer;
+    }
+    
+    function formateServes (serves: number): string {
+        if (serves > 1) {
+            return "servings";
+        }
+        return "serving";
+    }
+
+    // useEffect(() => {
+    //     function load () {
+    //         if (difficulty.toLowerCase() === "hard") {
+    //             setColor("red");
+    //         } else if (difficulty.toLowerCase() === "medium") {
+    //             setColor("yellow");
+    //         }
+    //     }
+    //     load();
+    // }, [difficulty])
+    
     return (
         <div
             className="w-[368px] max-w-[400px] rounded-t-3xl overflow-hidden flex flex-col lg:items-start mt-5 transition-all linear duration-300 hover:shadow-md"
@@ -25,16 +51,20 @@ export function RecipeIcon ({
                     className="flex items-center justify-around mb-4"
                 >
                     <p className="text-xs text-green-700/95 flex flex-col items-center justify-center">
-                    <Clock4 className="text-green-700 size-4"/>
-                        { timer } min
+                        <Clock4 className="text-green-700 size-4"/>
+                        { timer && formateTimer(timer) } 
                     </p>
                     <p className="text-xs text-green-700/95 flex flex-col items-center justify-center">
-                    <UserRound className="text-green-700 size-4"/>
-                        { serves } servings
+                        <UserRound className="text-green-700 size-4"/>
+                        { `${serves} ${formateServes(serves)}` }
                     </p>
-                    <p className="text-xs text-green-700/95 flex flex-col items-center justify-center">
-                    <ChartNoAxesColumn className="text-green-700 size-4"/>
-                        { difficulty }
+                    <p className={cn("text-xs text-green-700/95 flex flex-col items-center justify-center",
+                        difficulty.toLowerCase() === "hard" ? "text-red-700" : difficulty.toLowerCase() === "medium" ? "text-yellow-700" : "text-green-700"
+                    )}>
+                        <ChartNoAxesColumn className={cn("size-4",
+                            difficulty.toLowerCase() === "hard" ? "text-red-700" : difficulty.toLowerCase() === "medium" ? "text-yellow-700" : "text-green-700"
+                        )}/>
+                        { difficulty.toLowerCase() }
                     </p>
                 </span>
             
