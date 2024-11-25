@@ -41,11 +41,11 @@ export function RecipeIcon ({
     
     return (
         <div
-            className="w-[368px] max-w-[400px] rounded-t-3xl overflow-hidden flex flex-col lg:items-start mt-5 transition-all linear duration-300 hover:shadow-md"
+            className="w-[368px] max-w-[400px] rounded-2xl overflow-hidden flex flex-col lg:items-start mt-5 shadow-md"
         >
             <img src="/png/food-gallery.jpg" alt="Food" className="w-full"/>
             <div
-                className="bg-slate-200/95 -mt-4 w-full text-base font-medium font-poppins flex flex-col p-2"
+                className="bg-slate-50/95 -mt-4 w-full text-base font-medium font-poppins flex flex-col p-2"
             >
                 <span
                     className="flex items-center justify-around mb-4"
