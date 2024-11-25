@@ -71,9 +71,9 @@ export function App() {
 
           {/* galeria de receitas */}
           <div
-            className="grid grid-cols-1 lg:grid-cols-3 py-2 gap-3 place-items-center px-4 pb-[300px]"
+            className="grid lg:justify-items-stretch justify-items-center gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full bg-red-500 py-10"
           >
-            {/* receita */}
+            {/* receitas */}
             { recipes.map((recipe) => (
               <RecipeIcon 
                 key={recipe.name}
@@ -83,8 +83,15 @@ export function App() {
                 serves={recipe.serves}
               />
             ))}
-            
           </div>
+
+          {/* About section */}
+          <div
+            className="max-w-screen-[1980px] mx-auto bg"
+          >
+
+          </div>
+          
         </div>
       </section>
     </>

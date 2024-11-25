@@ -27,21 +27,10 @@ export function RecipeIcon ({
         }
         return "serving";
     }
-
-    // useEffect(() => {
-    //     function load () {
-    //         if (difficulty.toLowerCase() === "hard") {
-    //             setColor("red");
-    //         } else if (difficulty.toLowerCase() === "medium") {
-    //             setColor("yellow");
-    //         }
-    //     }
-    //     load();
-    // }, [difficulty])
     
     return (
         <div
-            className="w-[368px] max-w-[400px] rounded-t-3xl overflow-hidden flex flex-col lg:items-start mt-5 transition-all linear duration-300 hover:shadow-md"
+            className="col-span-1 max-lg:w-[324px] rounded-t-3xl overflow-hidden flex flex-col lg:items-start mt-5 transition-all linear duration-300 hover:shadow-md"
         >
             <img src="/png/food-gallery.jpg" alt="Food" className="w-full"/>
             <div
