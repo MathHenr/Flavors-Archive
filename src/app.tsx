@@ -84,16 +84,18 @@ export function App() {
               />
             ))}
           </div>
-
-          {/* About section */}
-          <div
-            className="max-w-screen-[1980px] mx-auto bg"
-          >
-
-          </div>
-          
         </div>
       </section>
+
+      {/* About section */}
+      <section
+        className="max-w-screen-[1980px] mx-auto bg"
+      >
+
+      </section>
+          
+      
+      
     </>
   )
 }
