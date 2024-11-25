@@ -30,7 +30,7 @@ export function RecipeIcon ({
     
     return (
         <div
-            className="col-span-1 max-lg:w-[324px] rounded-2xl overflow-hidden flex flex-col lg:items-start mt-5 shadow-md"
+            className="col-span-1 max-lg:w-[324px] rounded-2xl overflow-hidden flex flex-col lg:items-start mt-5 shadow-md hover:scale-105 transition-all linear duration-100"
         >
             <img src="/png/food-gallery.jpg" alt="Food" className="w-full"/>
             <div
