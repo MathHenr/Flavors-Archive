@@ -71,7 +71,7 @@ export function App() {
 
           {/* galeria de receitas */}
           <div
-            className="grid lg:justify-items-stretch justify-items-center gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full bg-red-500 py-10"
+            className="grid lg:justify-items-stretch justify-items-center gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full py-10"
           >
             {/* receitas */}
             { recipes.map((recipe) => (
