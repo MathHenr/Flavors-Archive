@@ -1,7 +1,18 @@
 import { Clock4, UserRound, ChartNoAxesColumn } from "lucide-react";
 
+interface RecipeProps {
+    name: string;
+    timer: number;
+    serves: number;
+    difficulty: string;
+}
 
-export function RecipeIcon () {
+export function RecipeIcon ({
+    name,
+    timer,
+    serves,
+    difficulty
+}: RecipeProps) {
     return (
         <div
             className="w-[368px] max-w-[400px] rounded-t-3xl overflow-hidden flex flex-col lg:items-start mt-5 transition-all linear duration-300 hover:shadow-md"
@@ -15,20 +26,20 @@ export function RecipeIcon () {
                 >
                     <p className="text-xs text-green-700/95 flex flex-col items-center justify-center">
                     <Clock4 className="text-green-700 size-4"/>
-                    4 min
+                        { timer } min
                     </p>
                     <p className="text-xs text-green-700/95 flex flex-col items-center justify-center">
                     <UserRound className="text-green-700 size-4"/>
-                    3 servings
+                        { serves } servings
                     </p>
                     <p className="text-xs text-green-700/95 flex flex-col items-center justify-center">
                     <ChartNoAxesColumn className="text-green-700 size-4"/>
-                    ease
+                        { difficulty }
                     </p>
                 </span>
             
                 <span>
-                    Recipe name
+                    { name }
                 </span>
                 <a 
                     className="max-w-20 text-xs text-mustard/80 hover:text-mustard hover:underline"

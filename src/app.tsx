@@ -1,10 +1,8 @@
-import { Button } from "./components/button";
 import { Navigation } from "./components/navigation";
-
-
+import { Button } from "./components/button";
+import { RecipeIcon } from "./components/recipe-icon";
 
 export function App() {
-
   return (
     <>
       <Navigation />
@@ -75,7 +73,7 @@ export function App() {
             className="grid grid-cols-1 lg:grid-cols-3 py-2 gap-3 place-items-center px-4 pb-[300px]"
           >
             {/* receita */}
-            
+            <RecipeIcon />
             
           </div>
         </div>
