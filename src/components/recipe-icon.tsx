@@ -34,10 +34,11 @@ export function RecipeIcon ({
         >
             <img src="/png/food-gallery.jpg" alt="Food" className="w-full"/>
             <div
-                className="bg-slate-50/95 -mt-4 w-full text-base font-medium font-poppins flex flex-col p-2"
+                className="bg-slate-50/95 -mt-8 lg:-mt-10 w-full text-base font-medium font-poppins flex flex-col p-2 pb-6"
             >
+                {/* Icon section */}
                 <span
-                    className="flex items-center justify-around mb-4"
+                    className="flex items-center justify-around mb-6"
                 >
                     <p className="text-xs text-green-700/95 flex flex-col items-center justify-center">
                         <Clock4 className="text-green-700 size-4"/>
