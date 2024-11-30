@@ -30,7 +30,6 @@ export function App() {
       <header
         className="max-w-screen-2xl mx-auto mt-12 px-4 grid grid-cols-1 lg:grid-cols-2 font-poppins"
       >
-        {/* texto com botao */}
         <div
           className="col-span-1 flex flex-col items-center lg:items-start justify-between w-full min-h-[148px] gap-10"
         >
@@ -52,7 +51,7 @@ export function App() {
           
         </div>
 
-        {/* imagem */}
+        {/* Image */}
         <div
           className="w-full relative items-center justify-center"
         >
@@ -87,11 +86,11 @@ export function App() {
             </Button>
           </div>
 
-          {/* galeria de receitas */}
+          {/* Recipe Gallery */}
           <div
             className="grid grid-cols-1 lg:grid-cols-4 py-2 gap-3 place-items-center px-4 pb-12"
           >
-            {/* receitas */}
+            {/* recipes */}
             { recipes.map((recipe) => (
               <RecipeIcon 
                 key={recipe.name}
