@@ -71,7 +71,7 @@ export function App() {
 
           {/* galeria de receitas */}
           <div
-            className="grid grid-cols-1 lg:grid-cols-4 py-2 gap-3 place-items-center px-4 pb-20"
+            className="grid grid-cols-1 lg:grid-cols-4 py-2 gap-3 place-items-center px-4 pb-12"
           >
             {/* receitas */}
             { recipes.map((recipe) => (
@@ -89,7 +89,7 @@ export function App() {
 
       {/* About section */}
       <section
-        className="w-full bg-slate-700 p-10 bg-feastTable bg-cover bg-no-repeat bg-center"
+        className="w-full bg-slate-700 p-12 my-12 bg-feastTable bg-cover bg-no-repeat bg-center"
       >
         <div
           className="max-w-screen-2xl mx-auto p-4 grid grid-cols-1 lg:grid-cols-2 font-poppins"
@@ -106,22 +106,26 @@ export function App() {
           </aside>
           {/* Ábout Project */}
           <aside
-            className="col-span-1 max-lg:max-w-[400px] max-w-[600px] max-lg:mt-2 max-lg:place-self-end p-4 bg-slate-50 rounded-2xl shadow-md space-y-4"
+            className="col-span-1 place-items-end"
           >
-            <h1
-              className="text-3xl font-medium"
+            <div
+              className="max-lg:max-w-[400px] max-w-[600px] max-lg:mt-2 max-lg:place-self-end p-4 bg-slate-50 rounded-2xl shadow-md space-y-4"
             >
-              About Project
-            </h1>
-            <p
-              className="text-sm font-normal leading-5"
-            >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, laboriosam impedit maiores molestias possimus, sapiente explicabo dolorem facere repellat dolorum omnis totam recusandae. Maxime deserunt necessitatibus quidem omnis reiciendis et!
-            </p>
+              <h1
+                className="text-3xl font-medium"
+              >
+                About Project
+              </h1>
+              <p
+                className="text-sm font-normal leading-5"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, laboriosam impedit maiores molestias possimus, sapiente explicabo dolorem facere repellat dolorum omnis totam recusandae. Maxime deserunt necessitatibus quidem omnis reiciendis et!
+              </p>
 
-            <Button>
-              Learn More
-            </Button>
+              <Button>
+                Learn More
+              </Button>
+            </div>
           </aside>
         </div>
       </section>
