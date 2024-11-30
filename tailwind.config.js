@@ -12,6 +12,9 @@ export default {
       colors: {
         mustard: '#F79F1A',
       },
+      backgroundImage: {
+        'feastTable': "url('/png/rustic-table.jpg')",
+      }
     },
   },
   plugins: [],

@@ -71,7 +71,7 @@ export function App() {
 
           {/* galeria de receitas */}
           <div
-            className="grid grid-cols-1 lg:grid-cols-4 py-2 gap-3 place-items-center px-4 pb-[300px]"
+            className="grid grid-cols-1 lg:grid-cols-4 py-2 gap-3 place-items-center px-4 pb-20"
           >
             {/* receitas */}
             { recipes.map((recipe) => (
@@ -89,13 +89,42 @@ export function App() {
 
       {/* About section */}
       <section
-        className="max-w-screen-[1980px] mx-auto bg"
+        className="w-full bg-slate-700 p-10 bg-feastTable bg-cover bg-no-repeat bg-center"
       >
+        <div
+          className="max-w-screen-2xl mx-auto p-4 grid grid-cols-1 lg:grid-cols-2 font-poppins"
+        >
+          {/* quick tip */}
+          <aside
+            className="col-span-1 flex items-end"
+          >
+            <div
+              className="max-w-[300px] bg-slate-50 text-green-700/90 font-medium p-3 rounded-lg shadow-md"
+            >
+              This is a quick tip aside html tag
+            </div>
+          </aside>
+          {/* Ábout Project */}
+          <aside
+            className="col-span-1 max-lg:max-w-[400px] max-w-[600px] max-lg:mt-2 max-lg:place-self-end p-4 bg-slate-50 rounded-2xl shadow-md space-y-4"
+          >
+            <h1
+              className="text-3xl font-medium"
+            >
+              About Project
+            </h1>
+            <p
+              className="text-sm font-normal leading-5"
+            >
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, laboriosam impedit maiores molestias possimus, sapiente explicabo dolorem facere repellat dolorum omnis totam recusandae. Maxime deserunt necessitatibus quidem omnis reiciendis et!
+            </p>
 
+            <Button>
+              Learn More
+            </Button>
+          </aside>
+        </div>
       </section>
-          
-      
-      
     </>
   )
 }
