@@ -1,4 +1,5 @@
 import { recipes } from "./db/recipes";
+import { comments } from "./db/comments";
 
 import { Navigation } from "./components/navigation";
 import { Button } from "./components/button";
@@ -142,10 +143,18 @@ export function App() {
           Comments from our Users
         </h1>
         <div
-          className="w-full px-4 py-2 bg-red-500 grid grid-cols-2 gap-3"
+          className="w-full px-4 py-2 grid grid-cols-2 gap-5"
         >
           {/* Comment component */}
-          <Comment />
+          {comments.map((comment) => (
+            <Comment 
+              comment={comment.comment}
+              image={comment.image}
+              rate={comment.rate}
+              recipeName={comment.recipeName}
+              user={comment.user}
+            />
+          ))}
         </div>
       </section>
     </>
