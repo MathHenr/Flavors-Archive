@@ -134,7 +134,7 @@ export function App() {
 
       {/* Comments section */}
       <section
-        className="max-w-screen-2xl mx-auto mt-20 flex flex-col items-center gap-10 font-poppins"
+        className="max-w-screen-2xl mx-auto mt-20 flex flex-col items-center gap-10 font-poppins mb-20"
       >
         <h1
           className="text-3xl font-medium"

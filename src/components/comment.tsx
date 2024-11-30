@@ -1,5 +1,7 @@
 import { Rate } from "./rate";
 
+const text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, fuga id maiores architecto, recusandae inventore officiis distinctio quisquam sit tempora cumque! Vitae perferendis praesentium quos quas, iure consequuntur voluptatem debitis."
+
 export function Comment () {
     return (
         <div
@@ -24,21 +26,32 @@ export function Comment () {
                 </p>
               </span>
             </div>
+
             <span>
               <Rate rating={2.5} />
             </span>
+
             <div
               className="flex flex-col items-center gap-2"
             >
               <p
                 className="text-xs leading-5"
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, fuga id maiores architecto, recusandae inventore officiis distinctio quisquam sit tempora cumque! Vitae perferendis praesentium quos quas, iure consequuntur voluptatem debitis.
+                {text.length >= 220 ? text.substring(0, 220)+"..." : text}
               </p>
               <div 
                 className="w-full h-[108px] bg-slate-400"
               />
             </div>
+
+            <span>
+                <a 
+                    className="text-xs text-mustard/80 hover:text-mustard hover:underline font-medium"
+                    href="#"
+                >
+                    View comment
+                </a>
+            </span>
           </div>
     )
 }
