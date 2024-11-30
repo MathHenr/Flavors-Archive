@@ -10,7 +10,7 @@ export function App() {
 
       {/* Header */}
       <header
-        className="max-w-screen-2xl mx-auto mt-12 px-4 grid grid-cols-1 lg:grid-cols-2 font-poppins overflow-hidden"
+        className="max-w-screen-2xl mx-auto mt-12 px-4 grid grid-cols-1 lg:grid-cols-2 font-poppins"
       >
         {/* texto com botao */}
         <div
@@ -36,7 +36,7 @@ export function App() {
 
         {/* imagem */}
         <div
-          className="w-full items-center justify-center"
+          className="w-full relative items-center justify-center"
         >
           <img 
             className="lg:absolute flex w-[700px] lg:-ml-[128px] -z-10 -rotate-12 select-none"
