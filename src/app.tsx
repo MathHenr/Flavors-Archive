@@ -46,9 +46,9 @@ export function App() {
         </div>
       </header>
       
-      {/* section discover */}
+      {/* Recipe section */}
       <section
-        className="mt-24 py-2"
+        className="mt-24 py-2 font-poppins"
       >
         <div
           className="max-w-screen-2xl mx-auto px-4 flex flex-col"
@@ -56,7 +56,7 @@ export function App() {
           <div className="flex items-center justify-between">
             <span>
               <h1
-                className="text-3xl font-semibold"
+                className="text-3xl font-medium"
               >
                 Discover, Create and Share
               </h1>
@@ -89,10 +89,10 @@ export function App() {
 
       {/* About section */}
       <section
-        className="w-full bg-slate-700 p-12 my-12 bg-feastTable bg-cover bg-no-repeat bg-center"
+        className="w-full bg-slate-700 p-12 my-12 bg-feastTable bg-cover bg-no-repeat bg-center font-poppins"
       >
         <div
-          className="max-w-screen-2xl mx-auto p-4 grid grid-cols-1 lg:grid-cols-2 font-poppins"
+          className="max-w-screen-2xl mx-auto p-4 grid grid-cols-1 lg:grid-cols-2"
         >
           {/* quick tip */}
           <aside
@@ -127,6 +127,59 @@ export function App() {
               </Button>
             </div>
           </aside>
+        </div>
+      </section>
+
+      {/* Comments section */}
+      <section
+        className="max-w-screen-2xl mx-auto mt-20 flex flex-col items-center gap-10 font-poppins"
+      >
+        <h1
+          className="text-3xl font-medium"
+        >
+          Comments from our Users
+        </h1>
+        <div
+          className="w-full py-2 bg-red-500 grid grid-cols-2 gap-3"
+        >
+          <div
+            className="bg-white p-2 flex flex-col gap-2 rounded-md shadow-md"
+          >
+            <div
+              className="flex items-center gap-8"
+            >
+              <div
+                className="bg-slate-200 rounded-full size-12"
+              />
+              <span>
+                <p
+                  className="text-base font-medium"
+                >
+                  Nome da receita
+                </p>
+                <p
+                  className="text-xs font-normal text-slate-500"
+                >
+                  username
+                </p>
+              </span>
+            </div>
+            <span>
+              stars
+            </span>
+            <div
+              className="flex flex-col items-center gap-2"
+            >
+              <p
+                className="text-xs leading-5"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, fuga id maiores architecto, recusandae inventore officiis distinctio quisquam sit tempora cumque! Vitae perferendis praesentium quos quas, iure consequuntur voluptatem debitis.
+              </p>
+              <div 
+                className="w-full h-[108px] bg-slate-400"
+              />
+            </div>
+          </div>
         </div>
       </section>
     </>
