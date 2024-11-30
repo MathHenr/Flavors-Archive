@@ -25,7 +25,7 @@ export function Comment () {
               </span>
             </div>
             <span>
-              <Rate />
+              <Rate rating={2.5} />
             </span>
             <div
               className="flex flex-col items-center gap-2"
