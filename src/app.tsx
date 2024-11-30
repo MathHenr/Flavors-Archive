@@ -1,27 +1,13 @@
-import { useState } from "react";
-
 import { recipes } from "./db/recipes";
 import { comments } from "./db/comments";
 
-import { MoveLeft, MoveRight } from "lucide-react";
 
 import { Navigation } from "./components/navigation";
 import { Button } from "./components/button";
 import { RecipeIcon } from "./components/recipe-icon";
-import { Comment } from "./components/comment";
+import { Carrousel } from "./components/carrousel";
 
 export function App() {
-  const [commentMargin, setCommentMargin] = useState(0);
-  
-
-  function handleLeftArrow () {
-    return commentMargin !== 0 ? (commentMargin - 1530) < 0 ? setCommentMargin(0) : setCommentMargin(commentMargin - 1530) : null;
-  }
-  
-  function handleRightArrow () {
-    return commentMargin === 4290 ? null : (commentMargin + 1530) > 4290 ? setCommentMargin(4290) : setCommentMargin(commentMargin + 1530);
-  }
-  
   return (
     <>
       <Navigation />
@@ -30,7 +16,6 @@ export function App() {
       <header
         className="max-w-screen-2xl mx-auto mt-12 px-4 grid grid-cols-1 lg:grid-cols-2 font-poppins"
       >
-        {/* texto com botao */}
         <div
           className="col-span-1 flex flex-col items-center lg:items-start justify-between w-full min-h-[148px] gap-10"
         >
@@ -52,7 +37,7 @@ export function App() {
           
         </div>
 
-        {/* imagem */}
+        {/* Image */}
         <div
           className="w-full relative items-center justify-center"
         >
@@ -87,11 +72,11 @@ export function App() {
             </Button>
           </div>
 
-          {/* galeria de receitas */}
+          {/* Recipe Gallery */}
           <div
             className="grid grid-cols-1 lg:grid-cols-4 py-2 gap-3 place-items-center px-4 pb-12"
           >
-            {/* receitas */}
+            {/* recipes */}
             { recipes.map((recipe) => (
               <RecipeIcon 
                 key={recipe.name}
@@ -122,7 +107,7 @@ export function App() {
               This is a quick tip aside html tag
             </div>
           </aside>
-          {/* Ábout Project */}
+          {/* About Project */}
           <aside
             className="col-span-1 place-items-end"
           >
@@ -158,38 +143,10 @@ export function App() {
           Comments from our Users
         </h1>
 
-        <div
-          style={{ marginLeft: `-${commentMargin}px` }}
-          className="w-[5800px] px-4 py-2 grid grid-cols-2 lg:grid-cols-4 grid-flow-col gap-5 transition-all ease-in-out duration-500"
-        >
-          {/* Comment component */}
-          {comments.map((comment) => (
-            <Comment 
-              comment={comment.comment}
-              image={comment.image}
-              rate={comment.rate}
-              recipeName={comment.recipeName}
-              user={comment.user}
-            />
-          ))}
-        </div>
-
-        <span
-          className="flex gap-3 items-center justify-center"
-        >
-          <p
-            className="text-slate-800 p-0.5 rounded-md transition-all ease-linear hover:bg-slate-200 hover:cursor-pointer hover:text-slate-800/70"
-            onClick={handleLeftArrow}
-          >
-            <MoveLeft />
-          </p>
-          <p
-            className="text-slate-800 p-0.5 rounded-md transition-all ease-linear hover:bg-slate-200 hover:cursor-pointer hover:text-slate-800/70"
-            onClick={handleRightArrow}
-          >
-            <MoveRight />
-          </p>
-        </span>
+        {/* Carrousel */}
+        <Carrousel 
+          comments={comments}
+        />
         
       </section>
     </>

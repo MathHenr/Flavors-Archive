@@ -1,7 +1,5 @@
 import { Rate } from "./rate";
 
-const text = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, fuga id maiores architecto, recusandae inventore officiis distinctio quisquam sit tempora cumque! Vitae perferendis praesentium quos quas, iure consequuntur voluptatem debitis."
-
 interface CommentProps {
     comment: string;
     rate: number;
