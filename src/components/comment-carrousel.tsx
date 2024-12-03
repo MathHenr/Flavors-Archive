@@ -117,7 +117,7 @@ export function CommentCarrousel () {
                     className="w-[20%] flex items-center justify-center gap-4"
                 >
                     <span
-                        className="hover:bg-slate-900/75 hover:text-slate-50 p-0.5 rounded-md hover:shadow-sm transition-all ease-linear"
+                        className="hover:bg-slate-900/75 hover:text-slate-50 p-0.5 rounded-md hover:shadow-sm transition-all ease-linear focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
                     >
                         <MoveLeft 
                             className="cursor-pointer"
@@ -125,7 +125,7 @@ export function CommentCarrousel () {
                         />
                     </span>
                     <span
-                        className="hover:bg-slate-900/75 hover:text-slate-50 p-0.5 rounded-md hover:shadow-sm transition-all ease-linear"
+                        className="hover:bg-slate-900/75 hover:text-slate-50 p-0.5 rounded-md hover:shadow-sm transition-all ease-linear focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
                     >
                         <MoveRight 
                             className="cursor-pointer"
