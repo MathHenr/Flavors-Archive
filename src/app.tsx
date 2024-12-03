@@ -1,13 +1,16 @@
 import { recipes } from "./db/recipes";
 
 import { Navigation } from "./components/navigation";
+import { Footer } from "./components/footer";
 import { Button } from "./components/button";
 import { RecipeIcon } from "./components/recipe-icon";
 import { CommentCarrousel } from "./components/comment-carrousel";
+import { Toaster } from "sonner";
 
 export function App() {
   return (
     <>
+      <Toaster richColors={true} />
       <Navigation />
 
       {/* Header */}
@@ -147,6 +150,9 @@ export function App() {
         </div>
         
       </section>
+
+      {/* Footer */}
+      <Footer />
     </>
   )
 }
