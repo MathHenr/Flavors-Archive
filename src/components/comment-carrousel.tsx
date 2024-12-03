@@ -10,14 +10,14 @@ export function CommentCarrousel () {
 
     function showNextComment () {
         setCommentIndex(index => {
-            if (index === comments.length - 1) return 0;
+            if (index === Math.floor((comments.length - 1)/3)) return 0;
             return index + 1;
         })
     }
 
     function showPrevComment () {
         setCommentIndex(index => {
-            if (index === 0) return comments.length - 1;
+            if (index === 0) return Math.floor((comments.length - 1)/3);
             return index - 1;
         })
     }
@@ -31,7 +31,7 @@ export function CommentCarrousel () {
                     // Comments
                     <div
                         className="col-span-1 w-[368px] max-h-[500px] bg-slate-50 p-2 flex flex-col gap-2 rounded-md shadow-md hover:scale-105 hove:shadow-xl transition-all ease-in-out duration-300"
-                        style={{ translate: `${-90 * commentIndex}%` }}
+                        style={{ translate: `${-300 * commentIndex}%` }}
                     >
                         <div
                             className="flex items-center gap-8"

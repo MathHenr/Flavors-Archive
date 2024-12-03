@@ -142,7 +142,7 @@ export function App() {
         </h1>
 
         {/* Carrousel */}
-        <div className="w-full p-3" >
+        <div className="max-w-[1530px] mx-auto p-3 overflow-hidden drop-shadow-lg" >
           <CommentCarrousel />
         </div>
         
