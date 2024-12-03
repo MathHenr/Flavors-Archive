@@ -9,14 +9,14 @@ export const comments = [
       image: "https://www.dummyimage.com/400",
       user,
       rate: 5,
-      recipeName: "Spaghetti Carbonara"
+      recipeName: "Spaghetti Carbonara 1"
     },
     {
       comment: "It was good, but I think it needed more seasoning.",
       image: "https://www.dummyimage.com/400",
       user,
       rate: 3.5,
-      recipeName: "Grilled Chicken"
+      recipeName: "Grilled Chicken 2"
     },
     {
       comment: "Not my favorite. The texture was a bit off.",

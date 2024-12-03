@@ -1,11 +1,9 @@
 import { recipes } from "./db/recipes";
-import { comments } from "./db/comments";
-
 
 import { Navigation } from "./components/navigation";
 import { Button } from "./components/button";
 import { RecipeIcon } from "./components/recipe-icon";
-import { Carrousel } from "./components/carrousel";
+import { CommentCarrousel } from "./components/comment-carrousel";
 
 export function App() {
   return (
@@ -135,7 +133,7 @@ export function App() {
 
       {/* Comments section */}
       <section
-        className="max-w-screen-2xl mx-auto mt-20 flex flex-col gap-10 font-poppins mb-20 overflow-hidden"
+        className="mx-auto mt-20 flex flex-col gap-4 mb-20 px-4 font-poppins"
       >
         <h1
           className="text-3xl text-center font-medium"
@@ -144,9 +142,9 @@ export function App() {
         </h1>
 
         {/* Carrousel */}
-        <Carrousel 
-          comments={comments}
-        />
+        <div className="w-full p-3" >
+          <CommentCarrousel />
+        </div>
         
       </section>
     </>
