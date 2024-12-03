@@ -1,27 +1,11 @@
-import { useState } from "react";
-
 import { recipes } from "./db/recipes";
-import { comments } from "./db/comments";
-
-import { MoveLeft, MoveRight } from "lucide-react";
 
 import { Navigation } from "./components/navigation";
 import { Button } from "./components/button";
 import { RecipeIcon } from "./components/recipe-icon";
-import { Comment } from "./components/comment";
+import { CommentCarrousel } from "./components/comment-carrousel";
 
 export function App() {
-  const [commentMargin, setCommentMargin] = useState(0);
-  
-
-  function handleLeftArrow () {
-    return commentMargin !== 0 ? (commentMargin - 1530) < 0 ? setCommentMargin(0) : setCommentMargin(commentMargin - 1530) : null;
-  }
-  
-  function handleRightArrow () {
-    return commentMargin === 4290 ? null : (commentMargin + 1530) > 4290 ? setCommentMargin(4290) : setCommentMargin(commentMargin + 1530);
-  }
-  
   return (
     <>
       <Navigation />
@@ -121,7 +105,7 @@ export function App() {
               This is a quick tip aside html tag
             </div>
           </aside>
-          {/* Ábout Project */}
+          {/* About Project */}
           <aside
             className="col-span-1 place-items-end"
           >
@@ -149,7 +133,7 @@ export function App() {
 
       {/* Comments section */}
       <section
-        className="max-w-screen-2xl mx-auto mt-20 flex flex-col gap-10 font-poppins mb-20 overflow-hidden"
+        className="mx-auto mt-20 flex flex-col gap-4 mb-20 px-4 font-poppins"
       >
         <h1
           className="text-3xl text-center font-medium"
@@ -157,38 +141,10 @@ export function App() {
           Comments from our Users
         </h1>
 
-        <div
-          style={{ marginLeft: `-${commentMargin}px` }}
-          className="w-[5800px] px-4 py-2 grid grid-cols-2 lg:grid-cols-4 grid-flow-col gap-5 transition-all ease-in-out duration-500"
-        >
-          {/* Comment component */}
-          {comments.map((comment) => (
-            <Comment 
-              comment={comment.comment}
-              image={comment.image}
-              rate={comment.rate}
-              recipeName={comment.recipeName}
-              user={comment.user}
-            />
-          ))}
+        {/* Carrousel */}
+        <div className="max-w-[1530px] w-full mx-auto p-3 overflow-hidden drop-shadow-lg" >
+          <CommentCarrousel />
         </div>
-
-        <span
-          className="flex gap-3 items-center justify-center"
-        >
-          <p
-            className="text-slate-800 p-0.5 rounded-md transition-all ease-linear hover:bg-slate-200 hover:cursor-pointer hover:text-slate-800/70"
-            onClick={handleLeftArrow}
-          >
-            <MoveLeft />
-          </p>
-          <p
-            className="text-slate-800 p-0.5 rounded-md transition-all ease-linear hover:bg-slate-200 hover:cursor-pointer hover:text-slate-800/70"
-            onClick={handleRightArrow}
-          >
-            <MoveRight />
-          </p>
-        </span>
         
       </section>
     </>
