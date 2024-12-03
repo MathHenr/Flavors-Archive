@@ -4,7 +4,7 @@ import { comments } from "../db/comments";
 
 import { MoveLeft, MoveRight } from "lucide-react";
 import { Rate } from "./rate";
-import { useIsMobile } from "../hook/useMobile";
+import { useIsMobile } from "../hook/useIsMobile";
 
 export function CommentCarrousel () {
     const [commentIndex, setCommentIndex] = useState(0);
