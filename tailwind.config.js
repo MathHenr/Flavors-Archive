@@ -1,3 +1,5 @@
+import { transform } from 'typescript';
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
@@ -15,7 +17,7 @@ export default {
       backgroundImage: {
         'feastTable': "url('/png/rustic-table.jpg')",
       },
-    },
+    }
   },
   plugins: [],
 }

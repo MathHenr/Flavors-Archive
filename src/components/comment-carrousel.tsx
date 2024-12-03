@@ -95,22 +95,44 @@ export function CommentCarrousel () {
                 ))}
             </div>
             <div
-                className="flex items-center justify-center gap-4 mt-4"
+                className="w-full flex items-center justify-between mt-4"
             >
-                <span
-                    className="transition-all ease-in-out hover:bg-slate-400/65 p-0.5 rounded-sm hover:shadow-sm cursor-pointer"
+                <div
+                    className="w-[80%] flex items-center justify-center lg:gap-3"
                 >
-                    <MoveLeft 
-                        onClick={showPrevComment}
-                    />
-                </span>
-                <span
-                    className="transition-all ease-in-out hover:bg-slate-400/65 p-0.5 rounded-sm hover:shadow-sm cursor-pointer"
+                    {comments
+                        .filter((_, index) => index<Math.ceil((comments.length-1)/3))
+                        .map((_, index) => (
+                            <button
+                                className={`w-4 lg:w-10 h-1 rounded-lg shadow-md ${index === commentIndex ? 'bg-slate-900' : 'bg-slate-400'} hover:bg-slate-900 transition-all ease-linear`}
+                                onClick={() => setCommentIndex(index)}
+                            >
+
+                            </button>
+                        ))
+                    }
+                    
+                </div>
+                <div
+                    className="w-[20%] flex items-center justify-center gap-4"
                 >
-                    <MoveRight
-                        onClick={showNextComment}
-                    />
-                </span>
+                    <span
+                        className="hover:bg-slate-900/75 hover:text-slate-50 p-0.5 rounded-md hover:shadow-sm transition-all ease-linear focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
+                    >
+                        <MoveLeft 
+                            className="cursor-pointer"
+                            onClick={showPrevComment}
+                        />
+                    </span>
+                    <span
+                        className="hover:bg-slate-900/75 hover:text-slate-50 p-0.5 rounded-md hover:shadow-sm transition-all ease-linear focus:outline-none focus:ring-2 focus:ring-slate-900 focus:ring-offset-2"
+                    >
+                        <MoveRight 
+                            className="cursor-pointer"
+                            onClick={showNextComment}
+                        />
+                    </span>
+                </div>
             </div>
         </div>
     )
