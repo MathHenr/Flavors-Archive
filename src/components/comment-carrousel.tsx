@@ -97,14 +97,20 @@ export function CommentCarrousel () {
             <div
                 className="flex items-center justify-center gap-4 mt-4"
             >
-                <MoveLeft 
-                    className="cursor-pointer"
-                    onClick={showPrevComment}
-                />
-                <MoveRight
-                    className="cursor-pointer"
-                    onClick={showNextComment}
-                />
+                <span
+                    className="transition-all ease-in-out hover:bg-slate-400/65 p-0.5 rounded-sm hover:shadow-sm cursor-pointer"
+                >
+                    <MoveLeft 
+                        onClick={showPrevComment}
+                    />
+                </span>
+                <span
+                    className="transition-all ease-in-out hover:bg-slate-400/65 p-0.5 rounded-sm hover:shadow-sm cursor-pointer"
+                >
+                    <MoveRight
+                        onClick={showNextComment}
+                    />
+                </span>
             </div>
         </div>
     )
