@@ -4,7 +4,7 @@ import { comments } from "../db/comments";
 
 import { MoveLeft, MoveRight } from "lucide-react";
 import { Rate } from "./rate";
-import { useIsMobile } from "../hook/useMobile";
+import { useIsMobile } from "../hook/useIsMobile";
 
 export function CommentCarrousel () {
     const [commentIndex, setCommentIndex] = useState(0);
@@ -95,16 +95,44 @@ export function CommentCarrousel () {
                 ))}
             </div>
             <div
-                className="flex items-center justify-center gap-4 mt-4"
+                className="w-full flex items-center justify-between mt-4"
             >
-                <MoveLeft 
-                    className="cursor-pointer"
-                    onClick={showPrevComment}
-                />
-                <MoveRight
-                    className="cursor-pointer"
-                    onClick={showNextComment}
-                />
+                <div
+                    className="w-[80%] flex items-center justify-center lg:gap-3"
+                >
+                    {comments
+                        .filter((_, index) => index<Math.ceil((comments.length-1)/3))
+                        .map((_, index) => (
+                            <button
+                                className={`w-4 lg:w-10 h-1 rounded-lg shadow-md ${index === commentIndex ? 'bg-slate-900' : 'bg-slate-400'} hover:bg-slate-900 transition-all ease-linear`}
+                                onClick={() => setCommentIndex(index)}
+                            >
+
+                            </button>
+                        ))
+                    }
+                    
+                </div>
+                <div
+                    className="w-[20%] flex items-center justify-center gap-4"
+                >
+                    <span
+                        className="hover:bg-slate-900/75 hover:text-slate-50 p-0.5 rounded-md hover:shadow-sm transition-all ease-linear"
+                    >
+                        <MoveLeft 
+                            className="cursor-pointer"
+                            onClick={showPrevComment}
+                        />
+                    </span>
+                    <span
+                        className="hover:bg-slate-900/75 hover:text-slate-50 p-0.5 rounded-md hover:shadow-sm transition-all ease-linear"
+                    >
+                        <MoveRight 
+                            className="cursor-pointer"
+                            onClick={showNextComment}
+                        />
+                    </span>
+                </div>
             </div>
         </div>
     )
