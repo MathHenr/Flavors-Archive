@@ -68,7 +68,3 @@ Contribuições são bem-vindas! Siga os passos abaixo para contribuir:
 ## Licença
 
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-## Contato
-
-Para mais informações, entre em contato pelo email: contato@recipevault.com
