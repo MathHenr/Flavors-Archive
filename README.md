@@ -12,17 +12,25 @@ Dicas e Personalizações: Um campo dedicado para usuários adicionarem suas sug
 Pesquisa e Categorias: Filtragem por ingredientes, tipos de pratos, dificuldade e mais.
 Objetivo:
 Criar uma comunidade apaixonada por culinária, onde qualquer pessoa possa compartilhar, aprender e reinventar receitas de forma prática e divertida. -->
+## Falvors Archive (landing page sobre receitas)
+
+## Descrição
+
+O Recipe Vault é uma plataforma interativa e intuitiva para entusiastas da culinária compartilharem suas criações gastronômicas. A página permite que usuários insiram receitas completas, detalhando ingredientes, etapas de preparo, fotos e até mesmo vídeos demonstrativos. Além disso, os usuários podem adicionar dicas especiais que personalizem a experiência de cada prato, como sugestões de substituições, acompanhamentos ou segredos de preparo.
+
+Com um design moderno e organizado, o Recipe Vault busca ser um espaço de troca de conhecimento culinário, promovendo a criatividade e a conexão entre pessoas que amam cozinhar. Seja para registrar sua receita de família, inovar na cozinha ou se inspirar em novas ideias, o Recipe Vault será sua fonte confiável e prática.
+
 ## Instalação
 
 Para rodar o projeto localmente, siga os passos abaixo:
 
 1. Clone o repositório:
   ```bash
-  git clone https://github.com/seu-usuario/recipe-vault.git
+  git clone https://github.com/MathHenr/Flavors-Archive.git
   ```
 2. Navegue até o diretório do projeto:
   ```bash
-  cd recipe-vault
+  cd Flavors-Archive
   ```
 3. Instale as dependências:
   ```bash
@@ -35,11 +43,8 @@ Para rodar o projeto localmente, siga os passos abaixo:
 
 ## Tecnologias Utilizadas
 
-- **Frontend:** React, Redux, CSS Modules
-- **Backend:** Node.js, Express
-- **Banco de Dados:** MongoDB
-- **Autenticação:** JWT (JSON Web Tokens)
-- **Armazenamento de Imagens/Vídeos:** AWS S3
+- **Frontend:** React, Redux
+- **Styling:** Tailwind
 
 ## Contribuição
 
